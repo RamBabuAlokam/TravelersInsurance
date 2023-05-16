@@ -1,0 +1,453 @@
+<!-- <h3 style="margin-left: 50px; margin-top: 50px">CG Protect Form</h3>
+
+<form>
+
+<div class="float-container">
+
+<div class="float-child form-group">
+
+<label for="firstname">First Name</label>
+
+
+
+
+<input
+
+type="text"
+
+class="form-control"
+
+placeholder="fname"
+
+id="firstname"
+
+required
+
+pattern="[a-zA-Z][a-zA-Z ]+"
+
+name="firstname"
+
+[(ngModel)]="form.firstName"
+
+name="name"
+
+#firstname="ngModel"
+
+/>
+
+<div
+
+[hidden]="firstname.valid || firstname.pristine"
+
+class="alert-danger"
+
+>
+
+<div [hidden]="!firstname.hasError('required')">Name is required</div>
+
+<div [hidden]="!firstname.hasError('pattern')">
+
+Only alphabets allowed
+</div>
+</div>
+
+
+
+
+<label for="phone">Phone Number</label>
+
+<input
+
+type="number"
+
+class="form-control"
+
+placeholder="phone number"
+
+name="phone"
+
+        id="mobilenumber"
+
+        required
+
+        [(ngModel)]="form.phone"
+
+        name="mobilenumber"
+
+        pattern="[0-9]*"
+
+        minlength="10"
+
+        maxlength="10"
+
+        #mobile="ngModel"
+
+      />
+
+      <div
+
+        [hidden]="mobile.valid || mobile.pristine"
+
+        class="alert alert-danger"
+
+      >
+
+        <div [hidden]="!mobile.hasError('minlength')">
+
+          Noumber should be 10 digit
+
+        </div>
+
+        <div [hidden]="!mobile.hasError('required')">Phone no. is required</div>
+
+        <div [hidden]="!mobile.hasError('pattern')">
+
+          Mobile numberr should be only 10 numbers
+
+        </div>
+
+      </div>
+
+      <label for="dob">Date Of Birth</label>
+
+      <input type="date" class="form-control" placeholder="DOB" name="dob" />
+
+    </div>
+
+
+
+
+    <div class="float-child">
+
+      <label for="lastname">Last Name</label>
+
+      <input
+
+        type="text"
+
+        class="form-control"
+
+        placeholder="lname"
+
+        name="lastName"
+
+        id="lastname"
+
+        required
+
+        pattern="[a-zA-Z][a-zA-Z ]+"
+
+        name="lastname"
+
+        [(ngModel)]="form.lastName"
+
+        name="name"
+
+        #lastname="ngModel"
+
+      />
+
+      <div
+
+        [hidden]="firstname.valid || firstname.pristine"
+
+        class="alert-danger"
+
+      >
+
+        <div [hidden]="!firstname.hasError('required')">
+
+          Last Name is required
+
+        </div>
+
+        <div [hidden]="!firstname.hasError('pattern')">
+
+          Only alphabets allowed
+
+        </div>
+
+      </div>
+
+
+
+
+      <label>Email Address</label>
+
+      <input
+
+        type="email"
+
+        class="form-control"
+
+        placeholder="email"
+
+        name="email"
+
+        id="emailaddress"
+
+        required
+
+        [(ngModel)]="form.email"
+
+        name="email"
+
+        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+
+        #email="ngModel"
+
+      />
+
+      <div [hidden]="email.valid || email.pristine" class="alert-danger">
+
+        <div [hidden]="!email.hasError('required')">Email is required</div>
+
+        <div [hidden]="!email.hasError('pattern')">
+
+          Email format should be
+
+          <small><b>joe@abc.com</b></small>
+
+        </div>
+
+      </div>
+
+
+
+
+      <label for="pincode">Pincode</label>
+
+      <input
+
+        type="number"
+
+        class="form-control"
+
+        placeholder="Pincode"
+
+        name="pincode"
+
+      />
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="div">
+
+    <p>Gender</p>
+
+
+
+
+    <div class="form-check form-check-inline">
+
+      <input
+
+        class="form-check-input"
+
+        type="radio"
+
+        id="inlineCheckbox1"
+
+        value="option1"
+
+        name="gender"
+
+      />
+
+
+
+
+      <label class="form-check-label" for="inlineCheckbox1">Male</label>
+
+    </div>
+
+
+
+
+    <div class="form-check form-check-inline">
+
+      <input
+
+        class="form-check-input"
+
+        type="radio"
+
+        id="inlineCheckbox2"
+
+        value="option2"
+
+        name="gender"
+
+      />
+
+
+
+
+      <label class="form-check-label" for="inlineCheckbox2">Female</label>
+
+    </div>
+
+
+
+
+    <div class="form-check form-check-inline">
+
+      <input
+
+        class="form-check-input"
+
+        type="radio"
+
+        id="inlineCheckbox2"
+
+        value="option2"
+
+        name="gender"
+
+      />
+
+
+
+
+      <label class="form-check-label" for="inlineCheckbox2">Transgender</label>
+
+    </div>
+
+  </div>
+
+  <div class="float-container">
+
+    <div class="float-child">
+
+      <p>Do you smoke?</p>
+
+      <button type="button" class="btn btn-primary">Yes</button>
+
+      <button
+
+        type="button"
+
+        class="btn btn-outline-primary"
+
+        style="margin-left: 20px"
+
+      >
+
+        No
+
+      </button>
+
+    </div>
+
+
+
+
+    <div class="float-child">
+
+      <p>Do you consume alcohol?</p>
+
+
+
+
+      <button type="button" class="btn btn-primary">Yes</button>
+
+
+
+
+      <button
+
+        type="button"
+
+        class="btn btn-outline-primary"
+
+        style="margin-left: 20px"
+
+      >
+
+        No
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="float-container">
+
+    <div class="float-child">
+
+      <p>Address</p>
+
+      <textarea cols="30" rows="5" name="address"></textarea>
+
+    </div>
+
+    <div class="float-child">
+
+      <p>Date Of Birth</p>
+
+      <input type="date" />
+
+    </div>
+
+    <br />
+
+    <hr />
+
+  </div>
+
+
+
+
+  <div class="card">
+
+    <div class="card-body">
+
+      <button
+
+        class="float-child"
+
+        type="button"
+
+        class="btn btn-primary"
+
+        disabled
+
+        style="margin-left: 40px"
+
+      >
+
+        Back
+
+      </button>
+
+      <button
+
+        class="float-child"
+
+        type="button"
+
+        class="btn btn-primary"
+
+        routerLink="/form1"
+
+        style="margin-left: 1000px"
+
+        (click)="submitForm()"
+
+      >
+
+        Next
+
+      </button>
+
+    </div>
+
+  </div>
+
+</form> -->
