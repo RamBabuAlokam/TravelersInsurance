@@ -1,0 +1,99 @@
+body{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.outerDiv{
+    position: absolute;
+    width: 100%;
+    height: 307px;
+    left: 0.21px;
+    top: -0.27px; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(src/assets/MainBackground.png);
+    display: flex;
+    flex-direction: row;
+}
+.innerDiv{
+    /* width: 30%;
+    height: 30px; */
+    list-style: none;
+    /* gap: 10px; */
+    display: grid;
+    grid-auto-flow: column;
+    /* margin-left: 65%; */
+
+    position: absolute;
+    width: 519.11px;
+    height: 33.98px;
+    left: 700.21px;
+    top: 0px;
+}
+a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16.2475px;
+    line-height: 20px;
+    color: #FFFFFF; 
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    list-style: none;
+   
+}
+.logoImg{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 14.21px;
+    top: 12.73px;
+
+}
+.brandName{
+    /* list-style: none; */
+    text-align: center;
+    /* position: absolute;
+    width: 187.93px;
+    height: 46.34px;
+    left: 115px;
+    top: 45px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29.2455px;
+    line-height: 35px;
+    color: #FEF9F9; */
+
+position: absolute;
+width: 187.93px;
+height: 46.34px;
+left: 85px;
+top: 41.37px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 29.2455px;
+line-height: 35px;
+
+color: #FEF9F9;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
